@@ -1,5 +1,5 @@
 @import "susy";
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
+//@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
 
 $susy: (
   columns: 12,
@@ -11,8 +11,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ecf0f1;
+  font-family: 'Helvetica', sans-serif;
+  //background-color: #ecf0f1;
 }
 .container {
   @include container;
@@ -81,7 +81,6 @@ header {
         padding: 20px 0;
         list-style: none;
         li {
-          //width: 90%;
           font-weight: 300;
           padding: 3px 0;
           font-size: 1.15em;
@@ -116,6 +115,23 @@ header {
   @include container(80%);
   ul {
     list-style: none;
+    li {
+      padding: 20px 0;
+      p {
+        padding: 3px 0;
+        margin: 8px 0;
+        font-weight: 300;
+        font-size: 1.15em;
+      }
+      ul {
+        padding: 0;
+        list-style: none;
+        li {
+          font-weight: 300;
+          padding: 3px 0 0 3%;
+        }
+      }
+    }
   }
   .education-title {
     font-weight: 300;
