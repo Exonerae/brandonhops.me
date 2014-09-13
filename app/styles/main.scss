@@ -1,19 +1,14 @@
 @import "susy";
-//@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
 
-$susy: (
-  columns: 12,
-);
-
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6, ul {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: 'Helvetica', sans-serif;
-  //background-color: #ecf0f1;
 }
+
 .container {
   @include container;
   background-color: #fff;
@@ -39,7 +34,7 @@ header {
 
 .section-title {
   text-align: center;
-  padding: 40px 0 20px 0;
+  padding: 20px 0 20px 0;
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 3px;
@@ -47,7 +42,7 @@ header {
 }
 
 .about-me {
-  @include container(50%);
+  @include container(55%);
   p {
     margin: 0;
     text-align: justify;
@@ -70,10 +65,10 @@ header {
   }
 }
 
-.work {
+.work, .education {
   @include break;
   @include container(80%);
-  #job-list {
+  ul {
     list-style: none;
     li {
       padding: 20px 0;
@@ -84,57 +79,36 @@ header {
           font-weight: 300;
           padding: 3px 0;
           font-size: 1.15em;
+          ul {
+            padding: 3px 10px;
+            li {
+              font-size: 0.85em;
+            }
+          }
         }
       }
     }
   }
-  .job-title {
-    font-weight: 300;
-    font-size: 1.5em;
-    .small {
-      font-weight: 100;
-      font-size: .65em;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+  .location {
+    font-weight: 100;
+    font-size: 1em;
+  }
+  .date {
+    float: right;
+    text-transform: uppercase;
+    color: #bbb;
   }
 }
 
-.location {
-  font-weight: 100;
-  font-size: 1em;
-}
-.date {
-  float: right;
-  text-transform: uppercase;
-  color: #bbb;
-}
 
-.education {
-  @include break;
-  @include container(80%);
-  ul {
-    list-style: none;
-    li {
-      padding: 20px 0;
-      p {
-        padding: 3px 0;
-        margin: 8px 0;
-        font-weight: 300;
-        font-size: 1.15em;
-      }
-      ul {
-        padding: 0;
-        list-style: none;
-        li {
-          font-weight: 300;
-          padding: 3px 0 0 3%;
-        }
-      }
-    }
-  }
-  .education-title {
-    font-weight: 300;
-    font-size: 1.5em;
+
+.title {
+  font-weight: 300;
+  font-size: 1.5em;
+  .small {
+    font-weight: 100;
+    font-size: .65em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 }
